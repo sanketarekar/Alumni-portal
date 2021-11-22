@@ -37,7 +37,7 @@ export default function ImageScroller() {
       sliderImgSmall.style.opacity = "1";
       sliderImg.style.opacity = "0.7";
     }, 600);
-    console.log(i);
+    // console.log(i);
   }
   function prevImg() {
     var sliderImg = document.getElementById('sliderImg');
@@ -55,6 +55,6 @@ export default function ImageScroller() {
       sliderImgSmall.style.opacity = "1";
       sliderImg.style.opacity = "0.7";
     }, 600);
-    console.log(i);
+    // console.log(i);
   }
 }
