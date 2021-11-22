@@ -1,0 +1,40 @@
+
+.Space{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+.Ats-css{
+    background-color: #080216;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-top: 20%;
+}
+.App-link {
+    color: #61dafb;
+    text-decoration: none;
+  }
+
+
+@media screen and (min-width: 721px) {
+    .Sethw{
+      width: 32vw;
+      height: 18vw;
+      
+    }
+  } 
+  
+  @media screen and (max-width: 720px) {
+    .Sethw{
+      width: 64vw;
+      height: 36vw;
+      margin: 10px 0px;
+    }
+  }
