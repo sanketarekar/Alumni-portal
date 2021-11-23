@@ -25,7 +25,7 @@
     .Sethw{
       width: 32vw;
       height: 18vw;
-      
+      border-radius: 2px;
     }
   } 
   
@@ -34,5 +34,6 @@
       width: 64vw;
       height: 36vw;
       margin: 10px 0px;
+      border-radius: 2px;
     }
   }
