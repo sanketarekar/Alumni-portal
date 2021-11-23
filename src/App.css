@@ -1,3 +1,13 @@
+*{
+  box-sizing: border-box;
+  margin: 0vw;
+  padding: 0vw;
+}
+
+body{
+  background: #080216;
+}
+
 .App {
   text-align: center;
 }

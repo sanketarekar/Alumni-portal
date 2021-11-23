@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
-    margin-top: 20%;
+    margin-top: 30px;
 }
 .App-link {
     color: #61dafb;
@@ -38,4 +38,12 @@
       margin: 10px 0px;
       border-radius: 2px;
     }
+  }
+
+  hr{
+    margin: 60px auto 60px auto;
+    width: 90%;
+    height: 1px;
+    background: white;
+    border: none;
   }

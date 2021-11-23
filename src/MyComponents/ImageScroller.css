@@ -1,12 +1,11 @@
-
 .container {
   /* border: 1px solid red; */
-  width: 95%;
+  width: 90%;
   margin-top: 8%;
-  margin-left: 2%;
- 
-  height: 28vw;
- position: relative;
+  /* margin-left: 2%; */
+  margin: 120px auto 0vw auto;
+  height: 40vw;
+  position: relative;
   /* margin: 0px auto; */
 }
 
@@ -66,4 +65,12 @@
   right: 0vw;
   top: 50%;
   border-radius: 5px 0px 0px 5px;
+}
+
+hr{
+  margin: 60px auto 0px auto;
+  width: 90%;
+  height: 1px;
+  background: white;
+  border: none;
 }

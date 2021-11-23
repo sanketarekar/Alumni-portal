@@ -13,15 +13,15 @@ const LoginPage = ({ login, error }) => {
     <div id="loginform">
       <form action="POST" onSubmit={submitHandler}>
         <div>
-          <h2 id="headerTitle">Login</h2>
+          <h2 id="headerTitle">Sign In</h2>
         </div>
         {error !== "" ? <div className="error">{error}</div> : ""}
         <div>
           <div className="row">
-            <label>UserName</label>
+            <label>Email ID</label>
             <input
-              type="text"
-              placeholder="Enter Your Username"
+              type="email"
+              placeholder="Enter Your Email ID"
               name="email"
               onChange={(e) =>
                 setdetails({ ...details, email: e.target.value })
@@ -44,7 +44,7 @@ const LoginPage = ({ login, error }) => {
 
           <div id="button" class="row">
             <button type="submit" value="LoginPage">
-              Login
+              Sign In
             </button>
           </div>
         </div>

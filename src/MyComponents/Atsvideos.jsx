@@ -24,6 +24,7 @@ export default function Atsvideos() {
                 {second_video}
             </div>
             <h3>{see_more}</h3>
+            <hr />
 
         </div>
     )

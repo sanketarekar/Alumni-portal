@@ -1,42 +1,38 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { NavLink as Link } from "react-router-dom";
 import logo from '../Images/logo.png';
 
 import './Navbars.css'
 function Navbar() {
 
-    const [nav,setnav]=useState(false);
+    const [nav, setnav] = useState(false);
 
-    const changeBackground=()=>{
-        if(window.scrollY >= 50){
+    const changeBackground = () => {
+        if (window.scrollY >= 1) {
             setnav(true);
         }
-        else{
+        else {
             setnav(false);
         }
     }
-    window.addEventListener('scroll',changeBackground);
+    window.addEventListener('scroll', changeBackground);
     return (
         <nav className={nav ? 'nav active' : 'nav'}>
-            <a href='#'className='logo'>
-                <img src={logo} alt=''/>
-            </a>
-            <input type='checkbox' className='menu-btn' id='menu-btn'/>
+            <Link to='/' className='logo'>
+                <img src={logo} alt='' />
+            </Link>
+            <input type='checkbox' className='menu-btn' id='menu-btn' />
             <label className='menu-icon' for='menu-btn'>
                 <span className='nav-icon'></span>
             </label>
             <ul className='menu'>
-                <li><a href='#' className='active'>Home</a></li>
-                <li><a href='#'>About us</a></li>
-                <li><a href='#'>Videos</a></li>
-                <li><a href='#'>SignIn</a></li>
-                <li><a href='#'>SignUp</a></li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/AboutUs'>About us</Link></li>
+                {/* <li><Link to='/#VideoSection'>Videos</Link></li> */}
+                <li><Link to='/SignIn'>Sign In</Link></li>
+                <li><Link to='/SignUp'>Sign Up</Link></li>
             </ul>
-            
-           
-           
         </nav>
-        
     )
 }
 
