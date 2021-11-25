@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.portal-info {
+  height: auto;
+  width: 100%;
+  /* background-color: aquamarine; */
+  /* background-color: #EADEDE; */
+  /* background-color: #EAEAEA; */
+  background-color: white;
+  margin-top: 3rem;
+  border-radius: 10rem;
+  
+}
+.portal-card {
+  padding: 0 10rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 6rem;
+}
+.information-prop {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.portal-card-image {
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.portal-info-heading {
+  text-align: center;
+  color: brown;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.portal-card-moreinfo {
+  display: flex;
+  margin: 10px;
+  /* align-items: center; */
+  flex-direction: column;
+  margin-top: 17px;
+}
+.portal-card-moreinfo h2 {
+  margin-bottom: 0.5rem;
+}
+.portal-info-columns {
+  display: flex;
+  flex-direction: row;
+}
+.portal-info-leftcolumn {
+  width: 50%;
+}
+.portal-info-rightcolumn {
+  width: 50%;
+}
+
+@media only screen and (max-width: 990px) {
+  .portal-card {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .portal-card {
+    padding: 0;
+    margin-left: 0rem;
+  }
+
+  .portal-info{
+    border-radius: 0rem;
+  }
+
+  .portal-info-heading{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .information-prop {
+    width: 100%;
+  }
+
+  .portal-info-columns {
+    flex-direction: column;
+  }
+  .portal-info-leftcolumn {
+    width: 100%;
+  }
+  .portal-info-rightcolumn {
+    width: 100%;
+  }
+}
