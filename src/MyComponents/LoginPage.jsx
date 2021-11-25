@@ -1,32 +1,56 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
+import {
+  useHistory
+} from 'react-router-dom';
 
 import "./LoginPage.css";
 
-const LoginPage = ({ login, error }) => {
-  const [details, setdetails] = useState({ email: "", password: "" });
 
+
+function Login(){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+ 
+ 
+  async function login(){
+    console.warn(email,password)
+    let item={email,password};
+    let result=await fetch("http://localhost:4000/users/login",{
+      method:'POST',
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":'application/json'
+      },
+      body:JSON.stringify(item)
+
+    });
+    result=await result.json();
+    localStorage.setItem("user-info",JSON.stringify(result))
+    
+  }
   const submitHandler = (e) => {
     e.preventDefault();
-    login(details);
+    
   };
-  return (
-    <div id="loginform">
-      <form action="POST" onSubmit={submitHandler}>
+    return (
+    
+      <div id="loginform">
+      <form action="POST" onSubmit={submitHandler} >
         <div>
           <h2 id="headerTitle">Sign In</h2>
         </div>
-        {error !== "" ? <div className="error">{error}</div> : ""}
+        
         <div>
           <div className="row">
             <label>Email ID</label>
             <input
-              type="email"
+              type="text"
               placeholder="Enter Your Email ID"
               name="email"
               onChange={(e) =>
-                setdetails({ ...details, email: e.target.value })
-              }
-              value={details.email}
+                setEmail( e.target.value)}
+              
+              
             />
           </div>
           <div className="row">
@@ -36,14 +60,14 @@ const LoginPage = ({ login, error }) => {
               name="password"
               placeholder="Enter Your Password"
               onChange={(e) =>
-                setdetails({ ...details, password: e.target.value })
-              }
-              value={details.password}
+                setPassword(e.target.value )}
+              
+              
             />
           </div>
 
           <div id="button" class="row">
-            <button type="submit" value="LoginPage">
+            <button onClick={login} type="submit" value="LoginPage">
               Sign In
             </button>
           </div>
@@ -57,6 +81,13 @@ const LoginPage = ({ login, error }) => {
       </div>
     </div>
   );
-};
 
-export default LoginPage;
+    
+      
+    }
+  
+
+  
+              
+
+export default Login;
