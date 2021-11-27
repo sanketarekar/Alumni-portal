@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Shippori+Antique+B1&display=swap");
+
+* {
+  font-family: "Poppins", "Shippori Antique B1", sans-serif;
+}
+
+.Message-section {
+  /* margin: 0 10rem; */
+  margin:1rem 7rem 1rem 9rem;
+  width: 80%;
+}
+
+.Directors-image {
+  max-height: 17rem;
+  border-radius: 50%;
+  margin-right: 3rem;
+  margin-top: 2rem;
+}
+
+.Message-information {
+  display: flex;
+  color: white;
+}
+
+.Message-heading{
+  margin-left: 10rem;
+  color: white;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .Message-section {
+    margin: 0 5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .Message-section {
+    margin: 0;
+  }
+  .Message-information {
+    flex-direction: column;
+  }
+  .Directors-image {
+    max-width: fit-content;
+    align-self: center;
+    margin-right: 0;
+    max-height: 13rem;
+    margin-top: 1rem;
+  }
+  .Message-description {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Message-section {
+    margin: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .Message-heading {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    margin: 0rem;
+  }
+  .Message-information {
+    flex-direction: column;
+  }
+  .Directors-image {
+    max-width: fit-content;
+    align-self: center;
+    margin-right: 0;
+    max-height: 13rem;
+    margin-top: 1rem;
+  }
+  .Message-description {
+    padding: 1rem;
+  }
+}
