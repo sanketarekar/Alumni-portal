@@ -31,7 +31,7 @@ html {
 #headerTitle {
   text-align: center;
   font-family: "open sans", sans-serif;
-  padding: 2rem 0;
+  padding: 2rem 0 1rem 0;
   margin: 0;
   font-size: 2rem;
 }
@@ -48,9 +48,9 @@ html {
   width: 80%;
   box-sizing: border-box;
   border: none;
-  font-size: 1.3rem;
-  padding-left: 1.5rem;
-  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  padding-left: 0rem;
+  padding-bottom: 0.7rem;
   box-shadow: inset 0px -3px 0px 0px rgba(187, 187, 187, 0.2);
   transition: box-shadow 0.2s ease-in;
 }
@@ -72,7 +72,7 @@ html {
 
 .row label {
   align-self: start;
-  padding-left: 4.5rem;
+  padding-left: 2.6rem;
   padding-bottom: 0.5rem;
   color: rgba(187, 187, 187, 0.9);
 }
@@ -100,7 +100,8 @@ html {
 }
 
 #button {
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 
 #googleIcon {
@@ -113,7 +114,7 @@ html {
 #iconGroup {
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 0rem 0;
 }
 
 #iconGroup a {
@@ -122,6 +123,6 @@ html {
 
 #alternativeLogin {
   text-align: center;
-  padding-top: 2rem;
-  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  margin-top: 0rem;
 }

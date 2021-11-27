@@ -16,16 +16,13 @@ export default function Atsvideos() {
     </a>
 
     return (
-        <div className='Ats-css'>
-
+        <div id='VideoSection' className='Ats-css'>
             <h1>Alumni Talk Series</h1>
             <div className='Space'>
                 {first_video}
                 {second_video}
             </div>
             <h3>{see_more}</h3>
-            <hr />
-
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./LoginPage.css";
+import "./RegisterPage.css";
 
 const LoginPage = ({ login, error }) => {
   const [details, setdetails] = useState({ email: "", password: "" });

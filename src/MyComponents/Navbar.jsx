@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink as Link } from "react-router-dom";
 import logo from '../Images/logo.png';
+import { HashLink } from 'react-router-hash-link';
 
 import './Navbars.css'
 function Navbar() {
@@ -28,7 +29,7 @@ function Navbar() {
             <ul className='menu'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/AboutUs'>About us</Link></li>
-                {/* <li><Link to='/#VideoSection'>Videos</Link></li> */}
+                <li><HashLink to='/#VideoSection' activeClassName="active">Videos</HashLink></li>
                 <li><Link to='/SignIn'>Sign In</Link></li>
                 <li><Link to='/SignUp'>Sign Up</Link></li>
             </ul>

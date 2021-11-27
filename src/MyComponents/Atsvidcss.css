@@ -39,11 +39,3 @@
       border-radius: 2px;
     }
   }
-
-  hr{
-    margin: 60px auto 60px auto;
-    width: 90%;
-    height: 1px;
-    background: white;
-    border: none;
-  }

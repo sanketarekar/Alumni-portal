@@ -39,13 +39,14 @@
   top: 0;
   width:100%;
   z-index: 1;
-    /* background-color: transparent; */
-    background: white;
-    transition: 0.6s ease-in-out;
+  /* background-color: transparent; */
+  background: lavender;
+  transition: 0.6s ease-in-out;
+  border-radius: 0px 0px 5px 5px;
   }
   nav.active{
   box-shadow: 5px 10px 30px rgba(0, 247, 255, 0.157);
-  background-color: #ffffff;
+  background-color: lavender;
   }
   nav ul{
   display: flex;
@@ -151,7 +152,7 @@
             top:65px;
             left:0px;
             background-color:#FFFFFF;
-            border-bottom:4px solid #1db096;
+            /* border-bottom:4px solid #1db096; */
             width:100%;
             padding:0px;
             margin:0px;
