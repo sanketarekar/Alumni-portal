@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./RegisterPage.css";
+import Navbar from './Navbar';
 
 export default function RegisterPage() {
 
@@ -8,6 +9,12 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      navigate('/MyProfile');
+    }
+  }, []);
 
   async function signUp() {
     let item = { name, email, password }
@@ -27,12 +34,12 @@ export default function RegisterPage() {
     if (result1.ok) {
       alert("Registration Done");
       localStorage.setItem("token", result.token)
-      navigate('/AboutUs');
+      navigate('/MyProfile');
     }
     else {
       alert("Something Went Wrong Please Try Again...");
     }
-    console.log(result);
+    // console.log(result1);
   }
 
   const submitHandler = (e) => {
@@ -40,35 +47,38 @@ export default function RegisterPage() {
   };
 
   return (
-    <div id="loginform">
-      <form onSubmit={submitHandler}>
-        <div>
-          <h2 id="headerTitle">Sign Up</h2>
-        </div>
-        <div>
-          <div className="row">
-            <label>First Name</label>
-            <input type="text" name="name" onChange={(e) => setName(e.target.value)} placeholder="Enter Your Name" required />
+    <>
+      <Navbar />
+      <div id="loginform">
+        <form onSubmit={submitHandler}>
+          <div>
+            <h2 id="headerTitle">Sign Up</h2>
           </div>
-          <div className="row">
-            <label>Email ID</label>
-            <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter Your Email ID" required />
+          <div>
+            <div className="row">
+              <label>First Name</label>
+              <input type="text" name="name" onChange={(e) => setName(e.target.value)} placeholder="Enter Your Name" required />
+            </div>
+            <div className="row">
+              <label>Email ID</label>
+              <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter Your Email ID" required />
+            </div>
+            <div className="row">
+              <label>Password</label>
+              <input type="password" name="password" onChange={(e) => setPassword(e.target.value)} placeholder="Enter Your Password" required />
+            </div>
+            <div id="button" class="row">
+              <button type="submit" value="LoginPage" onClick={signUp}>Sign Up</button>
+            </div>
           </div>
-          <div className="row">
-            <label>Password</label>
-            <input type="password" name="password" onChange={(e) => setPassword(e.target.value)} placeholder="Enter Your Password" required />
+        </form>
+        <div id="alternativeLogin">
+          <label>Or Sign Up with:</label>
+          <div id="iconGroup">
+            <a href="/" id="googleIcon" />
           </div>
-          <div id="button" class="row">
-            <button type="submit" value="LoginPage" onClick={signUp}>Sign Up</button>
-          </div>
-        </div>
-      </form>
-      <div id="alternativeLogin">
-        <label>Or Sign Up with:</label>
-        <div id="iconGroup">
-          <a href="/" id="googleIcon" />
         </div>
       </div>
-    </div>
+    </>
   )
 }

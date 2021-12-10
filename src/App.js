@@ -10,6 +10,8 @@ import AboutUs from './MyComponents/AboutUs';
 import Message from "./MyComponents/Message";
 import News from "./MyComponents/News";
 import PortalInfo from "./MyComponents/Portal-info";
+import MyProfile from "./MyComponents/ProfilePage/Profile";
+import Protected from './MyComponents/Protected';
 // import Message from './MyComponents/Message/Message';
 // import News from './MyComponents/News/News';
 // import PortalInfo from './MyComponents/PortalInfo/PortalInfo';
@@ -26,12 +28,13 @@ function App() {
   return (
     <Router>
       <div className="OutContainer">
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
+          <Route exact path="/" element={[<Navbar />, <ImageScroller />, <PortalInfo />, <Message />, <News />, <Atsvideos />]} />
           <Route exact path="/SignUp" element={<RegisterPage />} />
           <Route exact path="/SignIn" element={<LoginPage />} />
-          <Route exact path="/AboutUs" element={<AboutUs />} />
-          <Route exact path="/" element={[<ImageScroller />, <PortalInfo />, <Message />, <News />, <Atsvideos />]} />
+          <Route exact path="/MyProfile" element={<MyProfile />} />
+          {/* <Route exact path="/AboutUs" element={<AboutUs />} /> */}
         </Routes>
       </div>
     </Router>

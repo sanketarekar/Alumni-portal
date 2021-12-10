@@ -228,3 +228,14 @@
           background-color: white;
           box-shadow: none;
         }
+
+        #LogOutBtn{
+          background: rgba(255, 0, 0, 0.8);
+          /* border-radius: 5px; */
+        }
+
+        #LogOutBtnOut{
+          /* border: 1px solid black; */
+          background: rgba(255, 0, 0, 0);
+          border-radius: 5px;
+        }

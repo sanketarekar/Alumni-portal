@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { NavLink as Link } from "react-router-dom";
+import { NavLink as Link, useNavigate } from "react-router-dom";
 import logo from '../Images/logo.png';
-import { HashLink } from 'react-router-hash-link';
+// import { HashLink } from 'react-router-hash-link';
 
 import './Navbars.css'
 function Navbar() {
+    // const user = JSON.parse(localStorage.getItem('token'));
+    const navigate = useNavigate();
+    function SignOut() {
+        localStorage.clear();
+        navigate('/');
+    }
 
     const [nav, setnav] = useState(false);
 
@@ -27,11 +33,27 @@ function Navbar() {
                 <span className='nav-icon'></span>
             </label>
             <ul className='menu'>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/AboutUs'>About us</Link></li>
-                <li><HashLink to='/#VideoSection' activeClassName="active">Videos</HashLink></li>
-                <li><Link to='/SignIn'>Sign In</Link></li>
+                {
+                    localStorage.getItem('token') ?
+                        <>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/MyProfile'>My Profile</Link></li>
+                            <li id='LogOutBtnOut' onClick={SignOut}><Link to='#' id='LogOutBtn'>Sign Out</Link></li>
+                        </>
+                        :
+                        <>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/SignIn'>Sign In</Link></li>
+                            <li><Link to='/SignUp'>Sign Up</Link></li>
+                        </>
+                }
+                {/* <li><Link to='/'>Home</Link></li> */}
+                {/* <li><Link to='/AboutUs'>About us</Link></li> */}
+                {/* <li><Link to='/MyProfile'>My Profile</Link></li> */}
+                {/* <li><HashLink to='/#VideoSection' activeClassName="active">Videos</HashLink></li> */}
+                {/* <li><Link to='/SignIn'>Sign In</Link></li>
                 <li><Link to='/SignUp'>Sign Up</Link></li>
+                <li id='LogOutBtnOut' onClick={SignOut}><Link to='#' id='LogOutBtn'>Sign Out</Link></li> */}
             </ul>
         </nav>
     )

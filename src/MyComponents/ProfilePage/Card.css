@@ -1,0 +1,78 @@
+@media screen and (min-width: 1081px) {
+*{
+  margin: 0vw;
+  padding: 0vw;
+  box-sizing: border-box;
+}
+button{
+  cursor: pointer;
+  outline: none;
+}
+button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+.cardOut{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 30%;
+  box-shadow: 0.1vw 0.1vw 2vw rgba(0, 0, 0, 0.01);
+  border-radius: 0.3vw;
+  margin: 2vw 0vw;
+}
+
+.cardImg{
+  width: 90%;
+  margin-top: 5%;
+  border-radius: 0.3vw;
+}
+
+.cardContent{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+.postHeading{
+  /* border: 1px solid red; */
+  font-size: 1.3vw;
+  font-weight: bold;
+  text-align: left;
+  margin: 0.5vw 0vw;
+}
+.postTextContent{
+  /* border: 1px solid blue; */
+  font-size: 1.1vw;
+  text-align: left;
+  margin: 0.5vw 0vw;
+}
+.postDetailsBtn{
+  border-radius: 0.3vw;
+  font-size: 1.1vw;
+  font-weight: bold;
+  padding: 0.3vw;
+  width: 100%;
+  margin-top: 0.8vw;
+  background: lightskyblue;
+  /* color: rgb(26, 65, 90); */
+  color: white;
+  border: 0.1vw solid lightskyblue;
+}
+.postDetailsBtn:hover{
+  color: black;
+  border: 0.1vw solid black;
+  background: none;
+}
+.postDetailsBtn:active{
+  filter: blur(0.1vw);
+}
+}

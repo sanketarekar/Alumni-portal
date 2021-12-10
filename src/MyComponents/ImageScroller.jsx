@@ -10,12 +10,12 @@ import SliderImg6 from '../Images/BESTTEACHER1.jpg';
 import SliderImg7 from '../Images/BESTSTUDENT1.jpg';
 export default function ImageScroller() {
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     nextImg();
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImg();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   // try {
   //   window.clearInterval(sliderInterval)
