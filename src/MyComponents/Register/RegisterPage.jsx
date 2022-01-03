@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./RegisterPage.css";
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 
 export default function RegisterPage() {
 

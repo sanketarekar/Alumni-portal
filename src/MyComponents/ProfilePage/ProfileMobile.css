@@ -12,9 +12,9 @@
       a {
         -webkit-tap-highlight-color: transparent;
       }
-  body{
+  /* body{
     background: #f1f2f7;
-  }
+  } */
   .profileOut{
     /* border: 1px solid red; */
     position: relative;
@@ -22,7 +22,8 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 63px;
+    background: #f1f2f7;
   }
   .personalInfoOut{
     /* border: 1px solid green; */

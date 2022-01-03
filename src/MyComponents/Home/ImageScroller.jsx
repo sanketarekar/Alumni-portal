@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import './ImageScroller.css'
 import './Atsvidcss.css'
-import SliderImg1 from '../Images/1.jpg';
-import SliderImg2 from '../Images/2.jpg';
-import SliderImg3 from '../Images/3.jpg';
-import SliderImg4 from '../Images/BESTCOLLEGE1.jpg';
-import SliderImg5 from '../Images/BESTPRINCIPAL1.jpg';
-import SliderImg6 from '../Images/BESTTEACHER1.jpg';
-import SliderImg7 from '../Images/BESTSTUDENT1.jpg';
+import SliderImg1 from '../../Images/1.jpg';
+import SliderImg2 from '../../Images/2.jpg';
+import SliderImg3 from '../../Images/3.jpg';
+import SliderImg4 from '../../Images/BESTCOLLEGE1.jpg';
+import SliderImg5 from '../../Images/BESTPRINCIPAL1.jpg';
+import SliderImg6 from '../../Images/BESTTEACHER1.jpg';
+import SliderImg7 from '../../Images/BESTSTUDENT1.jpg';
 export default function ImageScroller() {
 
   useEffect(() => {

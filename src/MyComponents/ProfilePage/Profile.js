@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 // import Out from "../MyComponents/Out";
 import "./Profile.css";
@@ -10,10 +10,11 @@ import "./CardTab.css";
 import "./CardMobile.css";
 import userImg from './user.png';
 import editLogo from './edit.svg';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar/Navbar';
 
 export default function Profile() {
-  let myName = '';
+  // let myName = '';
+  const [myName, setMyName] = useState('')
   async function MyProfileFunc() {
     var token = localStorage.getItem("token");
     let myProfile = await fetch("http://localhost:4000/users/me", {
@@ -26,8 +27,9 @@ export default function Profile() {
     });
     var myProfile1 = await myProfile.json();
     // console.log(myProfile1);
-    myName = myProfile1.name;
-    console.log(myName);
+    // myName = myProfile1.name;
+    setMyName(myProfile1.name)
+    // console.log(myName);
   }
   const navigate = useNavigate();
   useEffect(() => {

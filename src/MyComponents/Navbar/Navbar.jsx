@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink as Link, useNavigate } from "react-router-dom";
-import logo from '../Images/logo.png';
+import logo from '../../Images/logo.png';
 // import { HashLink } from 'react-router-hash-link';
 
 import './Navbars.css'

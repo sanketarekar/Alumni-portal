@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-import "./RegisterPage.css";
-import Navbar from './Navbar';
+import "./LoginPage.css";
+import Navbar from '../Navbar/Navbar';
 
 function Login() {
   const [email, setEmail] = useState("");
