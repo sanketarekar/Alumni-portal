@@ -14,6 +14,8 @@
   .newsItem-headline {
     margin-bottom: 0.7rem;
   }
+
+  
   
   .newsItem-description {
     margin-left: 1.5rem;
@@ -61,7 +63,8 @@
 
     }
     .newsItem-button {
-      bottom: 0;
+      bottom: 1rem;
+      right: 1rem;
       /* padding-top: 0rem; */
     }
 

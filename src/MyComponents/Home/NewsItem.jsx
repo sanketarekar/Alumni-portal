@@ -7,6 +7,7 @@ const NewsItem = (props) => {
         <h2 className="newsItem-headline">{props.headline}</h2>
         <p>{props.description}</p>
         <button className="newsItem-button">Read More</button>
+        
       </div>
     </li>
   );
