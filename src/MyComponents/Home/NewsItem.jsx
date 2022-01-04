@@ -4,7 +4,7 @@ const NewsItem = (props) => {
     <li className="newsItem-list">
       <img src={props.img} alt="News-Image" className="newsItem-Img" />
       <div className="newsItem-description">
-        <h2>{props.headline}</h2>
+        <h2 className="newsItem-headline">{props.headline}</h2>
         <p>{props.description}</p>
         <button className="newsItem-button">Read More</button>
       </div>
@@ -13,3 +13,4 @@ const NewsItem = (props) => {
 };
 
 export default NewsItem;
+ 

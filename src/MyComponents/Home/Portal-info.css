@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 .portal-info {
@@ -11,14 +12,20 @@
   /* background-color: #EAEAEA; */
   background-color: white;
   margin-top: 3rem;
-  border-radius: 10rem;
+  /* border-radius: 10rem; */
   
+  /* margin-left: 10rem; */
+
 }
 .portal-card {
-  padding: 0 10rem;
+ 
   display: flex;
   flex-direction: column;
   margin-left: 6rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  margin-left: 15rem;
+
 }
 .information-prop {
   width: 100%;
@@ -33,10 +40,11 @@
 }
 
 .portal-info-heading {
-  text-align: center;
+  /* text-align: center; */
   color: brown;
   font-size: 3rem;
   margin-bottom: 2rem;
+  margin-left: 12rem;
 }
 .portal-card-moreinfo {
   display: flex;
@@ -79,6 +87,7 @@
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    margin-left: 2rem;
   }
 
   .information-prop {

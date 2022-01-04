@@ -36,7 +36,7 @@ function Navbar() {
                 {
                     localStorage.getItem('token') ?
                         <>
-                            <li><Link to='/'>Home</Link></li>
+                             <li><Link className="navbar-home-button active" to='/'>Home</Link></li>
                             <li><Link to='/MyProfile'>My Profile</Link></li>
                             <li id='LogOutBtnOut' onClick={SignOut}><Link to='#' id='LogOutBtn'>Sign Out</Link></li>
                         </>
